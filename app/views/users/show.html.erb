@@ -20,6 +20,33 @@
   <%= @user.address %>
 </p>
 
+<p><%= link_to "I'm hungry", "http://localhost:3000/create_random_order?user_id=#{@user.id}", :class => "btn btn-success btn-large" %></p>
+
+<% @user.orders.each do |order| %>
+  <p>Ordered for: <%= time_ago_in_words order.delivery_time %></p>
+  <ul>
+    <% order.meal.dishes.each do |dish| %>
+      <li><%= dish.name %>: <%= dish.description %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

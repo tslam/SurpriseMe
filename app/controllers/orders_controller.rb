@@ -1,4 +1,17 @@
 class OrdersController < ApplicationController
+  def create_random
+    user_id = params[:user_id]
+    user = User.find(user_id)
+    meal = user.meals.sample
+    order = Order.new
+    order.user_id = user_id
+    order.meal_id = meal.id
+    order.delivery_time = Time.now
+    order.save
+
+    redirect_to user
+  end
+
   # GET /orders
   # GET /orders.json
   def index

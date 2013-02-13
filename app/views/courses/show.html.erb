@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Dish:</b>
+  <%= @course.dish_id %>
+</p>
+
+<p>
+  <b>Meal:</b>
+  <%= @course.meal_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_course_path(@course) %> |
+<%= link_to 'Back', courses_path %>

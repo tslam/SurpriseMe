@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  delivery_time: 2013-02-13 10:25:50
+  total: 1.5
+  user_id: 1
+  meal_id: 1
+
+two:
+  delivery_time: 2013-02-13 10:25:50
+  total: 1.5
+  user_id: 1
+  meal_id: 1
